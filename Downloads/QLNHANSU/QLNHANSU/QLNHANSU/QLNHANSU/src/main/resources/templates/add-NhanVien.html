@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Nhan Vien</title>
+</head>
+<body>
+<h2>Add New Nhan Vien</h2>
+<form action="/nhanvien/add" method="post" th:object="${nhanVien}">
+  <label for="maNV">Ma NV:</label><br>
+  <input type="text" id="maNV" name="maNV" th:field="*{maNV}" required><br><br>
+
+  <label for="tenNV">Ten NV:</label><br>
+  <input type="text" id="tenNV" name="tenNV" th:field="*{tenNV}" required><br><br>
+
+  <label for="phai">Phai:</label><br>
+  <input type="text" id="phai" name="phai" th:field="*{phai}" required><br><br>
+
+  <label for="noiSinh">Noi Sinh:</label><br>
+  <input type="text" id="noiSinh" name="noiSinh" th:field="*{noiSinh}" required><br><br>
+
+  <label for="maPhong">Ma Phong:</label><br>
+  <input type="text" id="maPhong" name="maPhong" th:field="*{maPhong}" required><br><br>
+
+  <label for="luong">Luong:</label><br>
+  <input type="number" id="luong" name="luong" th:field="*{luong}" required><br><br>
+
+  <input type="submit" value="Submit">
+</form>
+</body>
+</html>

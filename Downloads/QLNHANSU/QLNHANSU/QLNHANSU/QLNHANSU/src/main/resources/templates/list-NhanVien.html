@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List of Employees</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Các đoạn CSS khác có thể được thêm vào đây -->
+</head>
+<body>
+
+<div class="container">
+    <h2>Danh sách nhân viên</h2>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Mã nhân viên</th>
+            <th>Họ và tên</th>
+            <th>Phái</th>
+            <th>Nơi sinh</th>
+            <th>Mã phòng</th>
+            <th>Lương</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="nhanVien : ${nhanVienList}">
+            <td th:text="${nhanVien.maNV}"></td>
+            <td th:text="${nhanVien.tenNV}"></td>
+            <td>
+                <img th:src="@{${nhanVien.genderImage}}" width="50" height="50" alt="Gender Image">
+            </td>
+            <td th:text="${nhanVien.noiSinh}"></td>
+            <td th:text="${nhanVien.maPhong}"></td>
+            <td th:text="${nhanVien.luong}"></td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- Các đoạn script JavaScript khác có thể được thêm vào đây -->
+
+</body>
+</html>

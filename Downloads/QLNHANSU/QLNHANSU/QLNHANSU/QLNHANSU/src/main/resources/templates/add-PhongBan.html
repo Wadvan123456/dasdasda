@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add New Phong Ban</title>
+</head>
+<body>
+<h2>Add New Phong Ban</h2>
+
+<form action="/phongban/add" method="post" th:object="${phongBan}">
+    <label for="maPhong">Ma Phong:</label><br>
+    <input type="text" id="maPhong" name="maPhong" th:field="*{maPhong}" required><br><br>
+
+    <label for="tenPhong">Ten Phong:</label><br>
+    <input type="text" id="tenPhong" name="tenPhong" th:field="*{tenPhong}" required><br><br>
+
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
